@@ -1,6 +1,6 @@
 //! This crate provides the poseidon gadget for use with `halo2_proofs`.
-//! This gadget has been stracted from zcash's halo2_gadgets:
-//! <https://github.com/zcash/halo2/tree/main/halo2_gadgets>
+//! This gadget has been extracted from zcash's halo2_gadgets:
+//! https://github.com/zcash/halo2/tree/main/halo2_gadgets
 
 #![cfg_attr(docsrs, feature(doc_cfg))]
 // Catch documentation errors caused by code changes.

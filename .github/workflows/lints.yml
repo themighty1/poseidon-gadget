@@ -30,7 +30,6 @@ jobs:
     name: Various lints
     timeout-minutes: 30
     runs-on: ubuntu-latest
-
     steps:
       - uses: actions/checkout@v2
       - uses: actions-rs/toolchain@v1
@@ -62,6 +61,10 @@ jobs:
         with:
           command: clippy
           args: --all-features --all-targets -- -D warnings
+      - name: Use typos with config file
+        uses: crate-ci/typos@master
+        with:
+          config: .config/typos.toml
 
       # Ensure intra-documentation links all resolve correctly
       # Requires #![deny(intra_doc_link_resolution_failure)] in crates.
