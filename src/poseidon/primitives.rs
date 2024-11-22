@@ -86,7 +86,7 @@ pub fn generate_constants<
 }
 
 /// Runs the Poseidon permutation on the given state.
-pub(crate) fn permute<F: Field, S: Spec<F, T, RATE>, const T: usize, const RATE: usize>(
+pub fn permute<F: Field, S: Spec<F, T, RATE>, const T: usize, const RATE: usize>(
     state: &mut State<F, T>,
     mds: &Mds<F, T>,
     round_constants: &[[F; T]],
